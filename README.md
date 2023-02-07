@@ -1,5 +1,5 @@
 <a href="https://stackql.io/">
-<img src="images/stackql-logo-bold.png" alt="StackQL" width="50%" height="50%">
+<img src="images/stackql-logo-bold.png" alt="StackQL" width="33%" height="33%">
 </a>
 <br />
 [![GitHub Actions](https://github.com/stackql/stackql-jupyter-base/actions/workflows/main.yml/badge.svg?branch=main)](https://github.com/stackql/stackql-jupyter-base/actions/workflows/main.yml)
@@ -9,7 +9,7 @@
 
 Base template repository to create a StackQL analytics notebook Docker container image including StackQL, Jupyter and Python (including `pandas`).  
 
-<img src="images/stackql-jupyter.png" alt="StackQL" width="60%" height="60%">
+<img src="images/stackql-jupyter.png" alt="StackQL" style="display:block;margin-left:auto;margin-right:auto;" width="80%" height="80%">
 
 This image also includes the StackQL Jupyter magic extension to allow StackQL queries to be executed directly from a Jupyter notebook cell, for instance:  
 
