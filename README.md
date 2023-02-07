@@ -1,4 +1,4 @@
-[![StackQL](https://stackql.io/img/stackql-banner.png)](https://stackql.io/)  
+[![StackQL](images/stackql-logo-bold.png)](https://stackql.io/)  
 <br />
 [![GitHub Actions](https://github.com/stackql/stackql-jupyter-base/actions/workflows/main.yml/badge.svg?branch=main)](https://github.com/stackql/stackql-jupyter-base/actions/workflows/main.yml)
 ![License](https://img.shields.io/github/license/stackql/stackql)
