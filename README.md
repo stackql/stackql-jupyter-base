@@ -1,6 +1,6 @@
 [![StackQL](https://stackql.io/img/stackql-banner.png)](https://stackql.io/)  
 <br />
-[![GitHub Actions](https://github.com/stackql/stackql-jupyter-demo/actions/workflows/main.yml/badge.svg?branch=main)](https://github.com/stackql/stackql-jupyter-demo/actions/workflows/main.yml)
+[![GitHub Actions](https://github.com/stackql/stackql-jupyter-base/actions/workflows/main.yml/badge.svg?branch=main)](https://github.com/stackql/stackql-jupyter-base/actions/workflows/main.yml)
 ![License](https://img.shields.io/github/license/stackql/stackql)
 
 # StackQL Jupyter Base Image
@@ -22,7 +22,7 @@ WHERE region = '$region' GROUP BY instanceState
 
 # Usage
 
-This repository builds and publishes the []() image to DockerHub.  This image is used by the []() template repository to create a StackQL analytics notebook instances.
+This repository builds and publishes the [__stackql/stackql-jupyter-base__](https://hub.docker.com/r/stackql/stackql-jupyter-base) image to DockerHub.  This image is used by the [__stackql-notebook__](https://github.com/stackql/stackql-notebook) template repository to create StackQL analytics notebook instances.
 
 # Build locally
 
