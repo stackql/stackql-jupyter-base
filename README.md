@@ -1,5 +1,5 @@
-<a href="https://stackql.io/">
-<img src="images/stackql-logo-bold.png" alt="StackQL" width="33%" height="33%">
+<a href="https://stackql.io/" target="_blank">
+<img src="assets/stackql-logo-bold.png" alt="StackQL" width="33%" height="33%">
 </a>
 <br />
 
@@ -8,7 +8,7 @@
 
 ## StackQL Jupyter Base Image
 
-Base template repository to create a StackQL analytics notebook Docker container image including StackQL, Jupyter and Python (including `pandas`).  
+Base image repository to create a StackQL analytics notebook Docker container image including StackQL, Jupyter and Python (including `pandas`).  
 
 <p align="center">
   <img src="images/stackql-jupyter.png" alt="StackQL" width="70%" height="70%">
