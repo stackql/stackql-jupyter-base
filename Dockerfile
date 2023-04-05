@@ -14,6 +14,7 @@ ENV PYTHON_PACKAGES="\
     matplotlib \
     pandas \
     psycopg2-binary \
+    pystackql \
 " 
 RUN pip install --upgrade pip \
     && pip install --no-cache-dir $PYTHON_PACKAGES

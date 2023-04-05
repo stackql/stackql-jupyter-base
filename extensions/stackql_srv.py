@@ -1,14 +1,15 @@
 from __future__ import print_function
 import pandas as pd
-import json
+import psycopg2, json
+from psycopg2.extras import RealDictCursor
+from IPython.core.magic import (Magics, magics_class, line_cell_magic)
 from io import StringIO
 from string import Template
-from pystackql import StackQL
 
-stackql = StackQL(download_dir='/srv/stackql')
+conn = psycopg2.connect("dbname=stackql user=stackql host=localhost port=5444")
 
 @magics_class
-class StackqlMagic(Magics):
+class StackqlSrvMagic(Magics):
 
     def get_rendered_query(self, data):
         t = Template(StringIO(data).read())
@@ -16,26 +17,19 @@ class StackqlMagic(Magics):
         return rendered
 
     def run_query(self, query):
-        return pd.read_json(stackql.execute(query))
-
-    def run_cmd(self, query):
-        return stackql.executeStmt(query)        
+        cur = conn.cursor(cursor_factory=RealDictCursor)
+        cur.execute(query)
+        rows = cur.fetchall()
+        cur.close()
+        return pd.read_json(json.dumps(rows))
 
     @line_cell_magic
-    def stackql(self, line, cell=None):
+    def stackql_srv(self, line, cell=None):
         if cell is None:
             results = self.run_query(self.get_rendered_query(line))
         else:
             results = self.run_query(self.get_rendered_query(cell))
-        return results
-
-    @line_cell_magic
-    def stackql_cmd(self, line, cell=None):
-        if cell is None:
-            results = self.run_cmd(self.get_rendered_query(line))
-        else:
-            results = self.run_cmd(self.get_rendered_query(cell))
-        return results                    
+        return results            
 
 def load_ipython_extension(ipython):
     """
@@ -43,5 +37,5 @@ def load_ipython_extension(ipython):
     can be loaded via `%load_ext module.path` or be configured to be
     autoloaded by IPython at startup time.
     """
-    ipython.register_magics(StackqlMagic)
+    ipython.register_magics(StackqlSrvMagic)
 
