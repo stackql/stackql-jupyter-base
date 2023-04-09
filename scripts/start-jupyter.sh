@@ -8,9 +8,3 @@ else
     token=$1
     start-notebook.sh --NotebookApp.token='${token}'
 fi
-
-
-
-
-
-
