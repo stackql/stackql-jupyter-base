@@ -23,7 +23,7 @@ FROM aws.ec2.instances
 WHERE region = '$region' GROUP BY instanceState
 ```
 
-> Use StackQL to query cloud inventory and perform analysis and visualisations for security analysis, cost management and optimization, and for cloud automation and provisioning.  For more information see the [StackQL documentation](https://stackql.io/docs).
+> Use StackQL to query cloud inventory and perform analysis and visualisations for security analysis, cost management and optimization, and for cloud automation and provisioning.  For more information see the [StackQL documentation](https://stackql.io/docs) or [StackQL on GitHub](https://github.com/stackql/stackql).
 
 ## Usage
 
